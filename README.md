@@ -7,7 +7,7 @@
 - List and 'To Do' Creation
 - Optional 'To Do' images
 - 'To do' progress tracking
-- Swipe Gestures for marking and deletion
+- Swipe gestures for marking and deletion
 # Tools
 - Firebase Authentication
 - Firebase Realtime Database
