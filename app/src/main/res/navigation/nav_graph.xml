@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreen">
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="chris.davison.todoapp.ui.fragments.SplashScreen"
+        tools:layout="@layout/fragment_splash_screen">
+        <action
+            android:id="@+id/action_splashScreen_to_welcomeScreen"
+            app:destination="@id/welcomeScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/createTodoScreen"
+        android:name="chris.davison.todoapp.ui.fragments.CreateTodoScreen"
+        android:label="Create">
+        <action
+            android:id="@+id/action_createItemScreen_to_myListScreen"
+            app:destination="@id/myListScreen"
+            app:popUpTo="@id/createTodoScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/myListScreen"
+        android:name="chris.davison.todoapp.ui.fragments.MyListScreen"
+        android:label="Home"
+        tools:layout="@layout/fragment_my_list_screen">
+        <action
+            android:id="@+id/action_myListScreen_to_createItemScreen"
+            app:destination="@id/createTodoScreen"
+            app:popUpTo="@id/myListScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeScreen"
+        android:name="chris.davison.todoapp.ui.fragments.WelcomeScreen"
+        android:label="Welcome"
+        tools:layout="@layout/fragment_welcome_screen">
+        <action
+            android:id="@+id/action_welcomeScreen_to_myListScreen"
+            app:destination="@id/myListScreen" />
+        <action
+            android:id="@+id/action_welcomeScreen_to_signInScreen"
+            app:destination="@id/signInScreen" />
+        <action
+            android:id="@+id/action_welcomeScreen_to_signUpScreen"
+            app:destination="@id/signUpScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInScreen"
+        android:name="chris.davison.todoapp.ui.fragments.SignInScreen"
+        android:label="Sign In"
+        tools:layout="@layout/fragment_sign_in_screen">
+        <action
+            android:id="@+id/action_signInScreen_to_myListScreen"
+            app:destination="@id/myListScreen" />
+        <action
+            android:id="@+id/action_signInScreen_to_userActionConfirmationScreen"
+            app:destination="@id/userActionConfirmationScreen"
+            app:popUpTo="@id/signInScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpScreen"
+        android:name="chris.davison.todoapp.ui.fragments.SignUpScreen"
+        android:label="Sign Up"
+        tools:layout="@layout/fragment_sign_up_screen">
+        <action
+            android:id="@+id/action_signUpScreen_to_myListScreen"
+            app:destination="@id/myListScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/userActionConfirmationScreen"
+        android:name="chris.davison.todoapp.ui.fragments.userActionConfirmationScreen"
+        android:label="Confirm"
+        tools:layout="@layout/fragment_user_action_confirmation_screen">
+        <action
+            android:id="@+id/action_userActionConfirmationScreen_to_welcomeScreen"
+            app:destination="@id/welcomeScreen"
+            app:popUpTo="@id/userActionConfirmationScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

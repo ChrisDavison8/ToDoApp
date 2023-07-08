@@ -1,0 +1,21 @@
+<resources>
+    <dimen name="fab_margin">25dp</dimen>
+    <dimen name="design_fab_size_normal">80dp</dimen>
+    <dimen name="large_button_width">400dp</dimen>
+    <dimen name="large_button_height">65dp</dimen>
+    <dimen name="small_button_width">130dp</dimen>
+    <dimen name="small_button_height">65dp</dimen>
+    <dimen name="large_input_field_width">400dp</dimen>
+    <dimen name="large_input_field_height">65dp</dimen>
+    <dimen name="button_text_size">20sp</dimen>
+    <dimen name="nav_header_text_size">16sp</dimen>
+    <dimen name="spinner_size_width">210dp</dimen>
+    <dimen name="spinner_size_height">60dp</dimen>
+    <dimen name="spinner_text_size">26sp</dimen>
+    <dimen name="todo_item_description_text_size">20sp</dimen>
+    <dimen name="todo_image_section_margin">60dp</dimen>
+    <dimen name="todo_list_selection_section_margin">60dp</dimen>
+    <dimen name="todo_create_button_section_margin">140dp</dimen>
+    <dimen name="todo_general_text_size">26sp</dimen>
+    <dimen name="todo_image_size">130dp</dimen>
+</resources>

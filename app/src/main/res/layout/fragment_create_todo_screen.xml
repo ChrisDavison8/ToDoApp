@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/createTodoSv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/createTodoCl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        tools:context=".ui.fragments.CreateTodoScreen">
+
+        <ImageView
+            android:id="@+id/createTodoImageIv"
+            android:layout_width="@dimen/todo_image_size"
+            android:layout_height="@dimen/todo_image_size"
+            android:layout_marginBottom="5dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/createTodoTakeImageBtn"
+            app:layout_constraintEnd_toEndOf="@+id/createTodoTakeImageBtn"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="@+id/createTodoTakeImageBtn"
+            app:srcCompat="@drawable/no_image_available" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/createTodoTakeImageBtn"
+            android:layout_width="@dimen/small_button_width"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_marginBottom="5dp"
+            android:text="@string/take_button"
+            android:textSize="@dimen/button_text_size"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/createTodoimageUploadBtn"
+            app:layout_constraintEnd_toEndOf="@+id/createTodoimageUploadBtn"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/createTodoimageUploadBtn" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/createTodoimageUploadBtn"
+            android:layout_width="@dimen/small_button_width"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_marginBottom="@dimen/todo_image_section_margin"
+            android:text="@string/upload_button"
+            android:textSize="@dimen/button_text_size"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/createToDoDescriptionTil"
+            app:layout_constraintEnd_toEndOf="@+id/createToDoDescriptionTil"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="@+id/createToDoDescriptionTil" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/createToDoDescriptionTil"
+            android:layout_width="@dimen/large_input_field_width"
+            android:layout_height="53dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.49">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/createToDoDescriptionTiet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/todo_input_hint"
+                android:inputType="text"
+                android:lines="1"
+                android:maxLength="100"
+                android:textSize="@dimen/todo_general_text_size" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:id="@+id/createTodoListChoiceRg"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/todo_list_selection_section_margin"
+            app:layout_constraintEnd_toEndOf="@+id/createToDoDescriptionTil"
+            app:layout_constraintStart_toStartOf="@+id/createToDoDescriptionTil"
+            app:layout_constraintTop_toBottomOf="@+id/createToDoDescriptionTil">
+
+            <RadioButton
+                android:id="@+id/createTodoExistingListRb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/create_radio_button_one"
+                android:textSize="@dimen/todo_general_text_size" />
+
+            <RadioButton
+                android:id="@+id/createTodoNewListRB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/create_radio_button_two"
+                android:textSize="@dimen/todo_general_text_size" />
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/createTodoNewListNameTil"
+            android:layout_width="@dimen/large_input_field_width"
+            android:layout_height="@dimen/large_input_field_height"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/createTodoListChoiceRg"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="@+id/createTodoListChoiceRg"
+            app:layout_constraintTop_toBottomOf="@+id/createTodoListChoiceRg">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/createTodoNewListNameTiet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/new_list_input_hint"
+                android:inputType="text"
+                android:lines="1"
+                android:maxLength="20"
+                android:textSize="@dimen/todo_general_text_size" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/createTodoListSpnr"
+            android:layout_width="@dimen/spinner_size_width"
+            android:layout_height="@dimen/spinner_size_height"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/createTodoListChoiceRg"
+            app:layout_constraintStart_toStartOf="@+id/createTodoListChoiceRg"
+            app:layout_constraintTop_toBottomOf="@+id/createTodoListChoiceRg" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/createTodoCreateBtn"
+            android:layout_width="@dimen/large_button_width"
+            android:layout_height="@dimen/large_button_height"
+            android:layout_marginTop="@dimen/todo_create_button_section_margin"
+            android:text="@string/create_todo"
+            android:textSize="@dimen/button_text_size"
+            app:cornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/createTodoListChoiceRg"
+            app:layout_constraintStart_toStartOf="@+id/createTodoListChoiceRg"
+            app:layout_constraintTop_toBottomOf="@+id/createTodoListChoiceRg" />
+
+        <ProgressBar
+            android:id="@+id/createTodoUploadingPb"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

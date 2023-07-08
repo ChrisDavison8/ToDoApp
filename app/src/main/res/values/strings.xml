@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">To Do App</string>
+    <string name="sign_in_button">SIGN IN</string>
+    <string name="sign_up_button">SIGN UP</string>
+    <string name="email_input">Email address</string>
+    <string name="password_input">Password</string>
+    <string name="password_confirm_input">Confirm password</string>
+    <string name="forgot_password">Forgot Password? <u>Click Here!</u></string>
+    <string name="first_name">FIRST NAME</string>
+    <string name="last_name">LAST NAME</string>
+    <string name="upload_button">UPLOAD</string>
+    <string name="take_button">TAKE</string>
+    <string name="create_todo">CREATE</string>
+    <string name="update_button">UPDATE</string>
+    <string name="logo_content_desc">App Logo</string>
+    <string name="image_content_desc">Item Image</string>
+    <string name="create_radio_button_one">Use existing List</string>
+    <string name="create_radio_button_two">Create new list</string>
+    <string name="new_list_input_hint">List Name</string>
+    <string name="todo_input_hint">To Do</string>
+    <string name="todo_description">To Do Description</string>
+    <string name="floating_button_content_desc">Create new list</string>
+    <string name="nav_header_image_desc">Navigation Header</string>
+    <string name="nav_header_title">Chris Davison</string>
+    <string name="nav_header_subtitle">linkedin.com/in/chris-davison-667555226</string>
+    <string name="user_action_conf_btn_text">OK</string>
+    <string name="password_reset_email_success">A password reset email has been sent to the
+    email address provided</string>
+    <string name="password_reset_email_failure">A password reset email was unable to be sent,
+    please try again later</string>
+    <string name="my_lists_nothing_textview">No lists to show</string>
+    <string name="alert_dialog_ok_button">OK</string>
+    <string name="alert_dialog_cancel_button">DISMISS</string>
+    <string name="alert_dialog_camera">Permission to access the Camera is required to take a
+        picture in the app.</string>
+    <string name="alert_dialog_storage">Permission to access images in storage is required to
+        select an image from storage.</string>
+</resources>
