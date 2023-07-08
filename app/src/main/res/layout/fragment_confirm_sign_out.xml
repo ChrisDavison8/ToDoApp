@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/confirmSignOutCl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfirmSignOut">
+
+    <TextView
+        android:id="@+id/confirmSignOutTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/confirm_sign_out_message"
+        android:textSize="@dimen/todo_general_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/confirmSignOutYesBtn"
+        android:layout_width="@dimen/large_button_width"
+        android:layout_height="@dimen/large_button_height"
+        android:layout_marginTop="75dp"
+        android:text="@string/confirm_sign_out_yes_btn"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@id/confirmSignOutTv"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="@+id/confirmSignOutTv"
+        app:layout_constraintTop_toBottomOf="@+id/confirmSignOutTv" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/confirmSignOutNoBtn"
+        android:layout_width="@dimen/large_button_width"
+        android:layout_height="@dimen/large_input_field_height"
+        android:layout_marginTop="15dp"
+        android:text="@string/confirm_sign_out_no_btn"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/confirmSignOutYesBtn"
+        app:layout_constraintStart_toStartOf="@+id/confirmSignOutYesBtn"
+        app:layout_constraintTop_toBottomOf="@+id/confirmSignOutYesBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

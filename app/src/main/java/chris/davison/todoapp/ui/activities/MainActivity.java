@@ -1,6 +1,7 @@
 package chris.davison.todoapp.ui.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.MenuCompat;
 import androidx.customview.widget.Openable;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
@@ -8,6 +9,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import android.os.Bundle;
+import android.view.Menu;
 
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.navigation.NavigationView;
@@ -32,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
         NavigationView navigationView = findViewById(R.id.mainActivityNV);
 
         appBarConfiguration = new AppBarConfiguration.Builder(R.id.myListScreen,
-                R.id.welcomeScreen, R.id.splashScreen, R.id.createTodoScreen)
+                R.id.welcomeScreen, R.id.splashScreen, R.id.createTodoScreen,
+                R.id.confirmSignOut)
                 .setOpenableLayout(openable).build();
 
         setSupportActionBar(materialToolbar);
@@ -46,5 +49,11 @@ public class MainActivity extends AppCompatActivity {
     public boolean onSupportNavigateUp() {
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuCompat.setGroupDividerEnabled(menu, true);
+        return true;
     }
 }
