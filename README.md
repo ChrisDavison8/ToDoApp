@@ -8,11 +8,11 @@
 - Optional 'To Do' images
 - 'To do' progress tracking
 # Tools
-Firebase Authentication
-Firebase Realtime Database
-Firebase Storage
-Android Studio
-Android SDK 26-33
+- Firebase Authentication
+- Firebase Realtime Database
+- Firebase Storage
+- Android Studio
+- Android SDK 26-33
 # Android Version Support
 Supports Android 7 or later.
 # Preview
